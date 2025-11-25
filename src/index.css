@@ -43,6 +43,16 @@ body {
   background-color: black;
 }
 
+body::-webkit-scrollbar {
+  width: 2px;
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
+  border-radius: 4px;
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .no-scrollbar {
   scrollbar-width: none;
