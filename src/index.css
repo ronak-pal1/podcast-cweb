@@ -1,9 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 @import "tailwindcss";
 
+
 @theme {
-  --color-primary: #000;
+  --color-primary: #e4f70a;
+  --color-secondary: #7b72ff;
+  --color-fade: #8e8e8e;
+  --color-fade2: #68768d;
+  --font-permanent-marker: 'Permanent Marker', cursive;
+  --font-gilroy: 'Gilroy Heavy', sans-serif;
+  --font-gilroy-extra-bold: 'Gilroy Extra Bold', sans-serif;
+  --font-metropolis: 'Metropolis Regular', sans-serif;
+  --font-metropolis-extra-light: 'Metropolis Extra Light', sans-serif;  
+}
+
+@font-face {
+  font-family: 'Gilroy Heavy';
+  font-style: normal;
+  src: url("./assets/fonts/gilroy/Gilroy-Heavy.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Gilroy Extra Bold';
+  font-style: normal;
+  src: url("./assets/fonts/gilroy/Gilroy-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Metropolis Regular';
+  font-style: normal;
+  src: url("./assets/fonts/metropolis/Metropolis-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Metropolis Extra Light';
+  font-style: normal;
+  src: url("./assets/fonts/metropolis/Metropolis-ExtraLight.otf") format("opentype");
 }
 
 body {
   margin: 0;
+  background-color: black;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
 }
