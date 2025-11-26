@@ -1,6 +1,6 @@
 const AboutTheShow = () => {
   return (
-    <div className="w-full bg-primary h-fit py-32 my-14 flex items-start flex-1 px-14 gap-x-32">
+    <div className="w-full bg-primary h-fit py-32 my-14 flex flex-col md:flex-row items-start flex-1 px-8 sm:px-14 gap-y-6 md:gap-x-32">
       {/* left section */}
       <div className="flex-[0.3] flex flex-col space-y-4">
         <div className="relative">
@@ -15,14 +15,14 @@ const AboutTheShow = () => {
           </div>
         </div>
 
-        <div className="text-black text-4xl mt-4 uppercase leading-normal font-metropolis">
+        <div className="text-black text-3xl md:text-4xl mt-4 uppercase leading-normal font-metropolis">
           Get into the minds of breakthrough business leaders & entrepreneurs
         </div>
       </div>
 
       {/* right section */}
       <div className="flex-[0.7]">
-        <p className="font-metropolis text-xl leading-relaxed">
+        <p className="font-metropolis text-lg md:text-xl leading-relaxed">
           From devastating pitfalls to life-changing aha moments, hosts and
           serial entrepreneurs themselves Pete Sena and David Salinas push
           interviews past the surface for an in-depth, insightful glimpse at the

@@ -1,38 +1,57 @@
 import { IoChevronBackSharp } from "react-icons/io5";
+import { useRef } from "react";
 
 const Guardians = () => {
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const moveLeft = () => {
+    scrollContainerRef.current?.scrollBy({
+      left: -379,
+    });
+  };
+
+  const moveRight = () => {
+    scrollContainerRef.current?.scrollBy({
+      left: 379,
+    });
+  };
+
   return (
     <div className="w-full flex flex-col bg-primary h-fit py-24 gap-y-8">
       {/* heading and controls */}
-      <div className="px-24 w-full flex items-end justify-between">
+      <div className="px-14 lg:px-24 w-full flex items-end justify-between">
         {/* heading */}
         <div className="flex flex-col space-y-8">
           <div className="w-[100px] h-[3px] bg-black"></div>
-          <p className="text-7xl font-gilroy-extra-bold text-black">
+          <p className="text-5xl md:text-7xl font-gilroy-extra-bold text-black">
             Guardians
           </p>
         </div>
 
         {/* controls */}
         <div className="flex items-center space-x-4">
+          <button
+            onClick={moveLeft}
+            className="w-[48px] h-[48px] border-2 border-black rounded-full flex items-center justify-center hover:bg-black hover:text-white transition-colors duration-200"
+          >
+            <IoChevronBackSharp className="text-xl" />
+          </button>
 
-            <button className="w-[48px] h-[48px] border-2 border-black rounded-full flex items-center justify-center hover:bg-black hover:text-white transition-colors duration-200">
-
-                <IoChevronBackSharp className="text-xl"/>
-
-            </button>
-
-            <button className="w-[48px] h-[48px] border-2 border-black rounded-full flex items-center justify-center hover:bg-black hover:text-white transition-colors duration-200">
-
-                <IoChevronBackSharp className="text-xl rotate-180"/>
-
-            </button>
-
+          <button
+            onClick={moveRight}
+            className="w-[48px] h-[48px] border-2 border-black rounded-full flex items-center justify-center hover:bg-black hover:text-white transition-colors duration-200"
+          >
+            <IoChevronBackSharp className="text-xl rotate-180" />
+          </button>
         </div>
       </div>
 
-      <div className="flex overflow-x-scroll no-scrollbar">
-        <div className="flex gap-x-12 ml-24 ">
+      <div
+        className="flex overflow-x-scroll no-scrollbar"
+        ref={scrollContainerRef}
+        style={{ scrollBehavior: "smooth" }}
+      >
+        <div className="flex gap-x-12 ml-14 lg:ml-24">
           <div className="w-[379px] h-[600px] relative">
             <img
               src="https://cdn.prod.website-files.com/6357ba166a2a7d36261b1875/637d67b6ce154953e15eaf2c_anna-elwart.webp"

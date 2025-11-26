@@ -16,11 +16,11 @@ const CircleImgBundle = ({ imgURLs }: { imgURLs: string[] }) => {
 const EpisodeCard = ({ theme = "dark" }: { theme?: "light" | "dark" }) => {
   return (
     <div
-      className={`w-full  h-fit p-16 relative flex items-start gap-14 ${
+      className={`w-full  h-fit p-8 md:p-16 relative flex md:flex-row flex-col items-start gap-14 ${
         theme === "light" ? "bg-primary" : "bg-transparent"
       }`}
     >
-      <div className="w-[190px] h-[190px] shrink-0">
+      <div className="w-[120px] h-[120px] md:w-[190px] md:h-[190px] shrink-0">
         <img
           src="https://cdn.prod.website-files.com/642d8d2499daed761b59cab1/6746e2cc9cc3f946f812fb7a_shots%20(2).png"
           className="w-full h-full object-cover"
@@ -73,11 +73,11 @@ const EpisodeCard = ({ theme = "dark" }: { theme?: "light" | "dark" }) => {
 const LatestEpisodes = () => {
   return (
     <div className="w-full my-32 flex justify-center items-center">
-      <div className="w-[70%] flex flex-col justify-center items-center space-y-10">
+      <div className="w-[90%] lg:w-[70%] flex flex-col justify-center items-center space-y-10">
         {/* heading */}
         <div className="w-full space-y-10">
           <div className="w-[200px] h-[3px] bg-white"></div>
-          <p className="text-white font-gilroy-extra-bold text-7xl">
+          <p className="text-white font-gilroy-extra-bold  text-5xl md:text-7xl">
             The latest episode
           </p>
         </div>

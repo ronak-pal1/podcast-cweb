@@ -4,8 +4,8 @@ import { FaSpotify, FaSquareInstagram, FaYoutube } from "react-icons/fa6";
 const Footer = () => {
   return (
     <footer className="w-full flex items-center justify-center ">
-      <div className="w-[80%] border-t-[3px] border-t-primary flex flex-col space-y-24 py-24">
-        <div className="w-full flex items-start justify-between">
+      <div className="w-[90%] lg:w-[80%] border-t-[3px] border-t-primary flex flex-col space-y-24 py-24">
+        <div className="w-full flex md:flex-row flex-col gap-y-10 md:gap-y-0 items-start justify-between">
           <div className="">
             <h3 className="text-base font-metropolis-extra-light text-white">
               Make a project with us

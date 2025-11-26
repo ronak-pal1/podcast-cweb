@@ -3,15 +3,15 @@ import { TbNorthStar } from "react-icons/tb";
 
 const ContactUs = () => {
   return (
-    <div className="w-full flex items-center justify-center my-32">
-      <div className="w-[80%] flex items-start  gap-20">
+    <div className="w-full flex items-center justify-center my-32" id="contact">
+      <div className="w-[90%] lg:w-[80%] flex md:flex-row flex-col items-start  gap-20">
         {/* Left section */}
         <div className="space-y-4  w-full flex-[0.4]">
           <div className="w-[100px] h-[3px] bg-primary mb-8"></div>
-          <h3 className="font-gilroy-extra-bold text-4xl text-primary uppercase">
+          <h3 className="font-gilroy-extra-bold text-3xl md:text-4xl text-primary uppercase">
             Reach Out And Connect With Us
           </h3>
-          <p className="text-fade2 text-lg font-metropolis-extra-light">
+          <p className="text-fade2 text-base md:text-lg font-metropolis-extra-light">
             Join the conversation about the ever-evolving world of business and
             brands. Dive deeper into the insights, failures, and aspirations
             with visionary entrepreneurs Pete Sena and David Salinas, as they
@@ -24,7 +24,7 @@ const ContactUs = () => {
         <div className=" w-full flex-[0.6] space-y-10">
           <div className="space-y-3">
             <div className="flex items-center space-x-3">
-              <p className="font-gilroy-extra-bold text-white text-xl">
+              <p className="font-gilroy-extra-bold text-white text-lg md:text-xl">
                 Select one...
               </p>
 
@@ -45,7 +45,7 @@ const ContactUs = () => {
 
           <div className="space-y-3">
             <div className="flex items-center space-x-3">
-              <p className="font-gilroy-extra-bold text-white text-xl">
+              <p className="font-gilroy-extra-bold text-white text-lg md:text-xl">
                 Full Name
               </p>
 
@@ -63,7 +63,7 @@ const ContactUs = () => {
 
           <div className="space-y-3">
             <div className="flex items-center space-x-3">
-              <p className="font-gilroy-extra-bold text-white text-xl">
+              <p className="font-gilroy-extra-bold text-white text-lg md:text-xl">
                 Email Address
               </p>
 
@@ -80,7 +80,7 @@ const ContactUs = () => {
 
           <div className="space-y-3">
             <div className="flex items-center space-x-3">
-              <p className="font-gilroy-extra-bold text-white text-xl">
+              <p className="font-gilroy-extra-bold text-white text-lg md:text-xl">
                 Leave us a note
               </p>
 
