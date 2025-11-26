@@ -1,5 +1,66 @@
 import { IoChevronBackSharp } from "react-icons/io5";
 import { useRef } from "react";
+import { motion } from "framer-motion";
+
+const GuardianData = [
+  {
+    image:
+      "https://cdn.prod.website-files.com/6357ba166a2a7d36261b1875/637d67b6ce154953e15eaf2c_anna-elwart.webp",
+    name: "Anna Elwart",
+    title: "CEO",
+  },
+  {
+    image:
+      "https://cdn.prod.website-files.com/6357ba166a2a7d36261b1875/637d67b6fd7d4f269b79c769_micha197130-mazur.webp",
+    name: "Michael Mazur",
+    title: "CTO",
+  },
+  {
+    image:
+      "https://cdn.prod.website-files.com/6357ba166a2a7d36261b1875/637d67b6ce154951e25eaf2d_micha197130-warda.webp",
+    name: "Michael Warda",
+    title: "CMO",
+  },
+  {
+    image:
+      "https://cdn.prod.website-files.com/6357ba166a2a7d36261b1875/637d67b6ce154953e15eaf2c_anna-elwart.webp",
+    name: "Anna Elwart",
+    title: "CEO",
+  },
+  {
+    image:
+      "https://cdn.prod.website-files.com/6357ba166a2a7d36261b1875/637d67b6fd7d4f269b79c769_micha197130-mazur.webp",
+    name: "Michael Mazur",
+    title: "CTO",
+  },
+];
+
+const GuardianCard = ({
+  image,
+  name,
+  title,
+}: {
+  image: string;
+  name: string;
+  title: string;
+}) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, x: 200 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.5 }}
+      className="w-[379px] h-[600px] relative"
+    >
+      <img src={image} className="w-full h-full object-cover" />
+
+      <div className="absolute bottom-5 left-5">
+        <p className="text-primary text-3xl font-permanent-marker">{name}</p>
+        <p className="text-white text-xl font-permanent-marker">{title}</p>
+      </div>
+    </motion.div>
+  );
+};
 
 const Guardians = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
@@ -51,76 +112,15 @@ const Guardians = () => {
         ref={scrollContainerRef}
         style={{ scrollBehavior: "smooth" }}
       >
-        <div className="flex gap-x-12 ml-14 lg:ml-24">
-          <div className="w-[379px] h-[600px] relative">
-            <img
-              src="https://cdn.prod.website-files.com/6357ba166a2a7d36261b1875/637d67b6ce154953e15eaf2c_anna-elwart.webp"
-              className="w-full h-full object-cover"
+        <div className="flex gap-x-12 ml-14 pr-14 lg:ml-24">
+          {GuardianData.map((guardian, index) => (
+            <GuardianCard
+              key={index}
+              image={guardian.image}
+              name={guardian.name}
+              title={guardian.title}
             />
-
-            <div className="absolute bottom-5 left-5">
-              <p className="text-primary text-3xl font-permanent-marker">
-                Anna Elwart
-              </p>
-              <p className="text-white text-xl font-permanent-marker">CEO</p>
-            </div>
-          </div>
-
-          <div className="w-[379px] h-[600px] relative">
-            <img
-              src="https://cdn.prod.website-files.com/6357ba166a2a7d36261b1875/637d67b6fd7d4f269b79c769_micha197130-mazur.webp"
-              className="w-full h-full object-cover"
-            />
-
-            <div className="absolute bottom-5 left-5">
-              <p className="text-primary text-3xl font-permanent-marker">
-                Anna Elwart
-              </p>
-              <p className="text-white text-xl font-permanent-marker">CEO</p>
-            </div>
-          </div>
-
-          <div className="w-[379px] h-[600px] relative">
-            <img
-              src="https://cdn.prod.website-files.com/6357ba166a2a7d36261b1875/637d67b6ce154951e25eaf2d_micha197130-warda.webp"
-              className="w-full h-full object-cover"
-            />
-
-            <div className="absolute bottom-5 left-5">
-              <p className="text-primary text-3xl font-permanent-marker">
-                Anna Elwart
-              </p>
-              <p className="text-white text-xl font-permanent-marker">CEO</p>
-            </div>
-          </div>
-
-          <div className="w-[379px] h-[600px] relative">
-            <img
-              src="https://cdn.prod.website-files.com/6357ba166a2a7d36261b1875/637d67b6ce154951e25eaf2d_micha197130-warda.webp"
-              className="w-full h-full object-cover"
-            />
-
-            <div className="absolute bottom-5 left-5">
-              <p className="text-primary text-3xl font-permanent-marker">
-                Anna Elwart
-              </p>
-              <p className="text-white text-xl font-permanent-marker">CEO</p>
-            </div>
-          </div>
-
-          <div className="w-[379px] h-[600px] relative mr-16">
-            <img
-              src="https://cdn.prod.website-files.com/6357ba166a2a7d36261b1875/637d67b6ce154951e25eaf2d_micha197130-warda.webp"
-              className="w-full h-full object-cover"
-            />
-
-            <div className="absolute bottom-5 left-5">
-              <p className="text-primary text-3xl font-permanent-marker">
-                Anna Elwart
-              </p>
-              <p className="text-white text-xl font-permanent-marker">CEO</p>
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>

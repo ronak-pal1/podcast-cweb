@@ -2,6 +2,7 @@ import { BsArrowDownLeft } from "react-icons/bs";
 import heroImg from "../assets/hero.jpg";
 import heroMP4Video from "../assets/hero.mp4";
 import Header from "./Header";
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
@@ -37,15 +38,33 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-col items-center justify-center space-y-1">
-              <h1 className="text-[5rem] sm:text-[6rem] md:text-[7rem] leading-none text-primary font-gilroy">
+              <motion.h1
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 1 }}
+                className="text-[5rem] sm:text-[6rem] md:text-[7rem] leading-none text-primary font-gilroy"
+              >
                 PODCAST
-              </h1>
-              <h1 className="text-[4rem] sm:text-[5rem] md:text-[6rem] leading-none text-white font-gilroy">
+              </motion.h1>
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 1.5 }}
+                className="text-[4rem] sm:text-[5rem] md:text-[6rem] leading-none text-white font-gilroy"
+              >
                 JONAKI
-              </h1>
-              <h1 className="text-[5rem] sm:text-[6rem] md:text-[7rem] leading-none text-primary font-gilroy">
+              </motion.h1>
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 1.7 }}
+                className="text-[5rem] sm:text-[6rem] md:text-[7rem] leading-none text-primary font-gilroy"
+              >
                 VIBES
-              </h1>
+              </motion.h1>
             </div>
           </div>
         </div>

@@ -1,9 +1,10 @@
 import { FaArrowRightLong } from "react-icons/fa6";
 import { TbNorthStar } from "react-icons/tb";
+import { motion } from "framer-motion";
 
 const ContactUs = () => {
   return (
-    <div className="w-full flex items-center justify-center my-32" id="contact">
+    <div className="w-full flex items-center justify-center my-32 overflow-x-hidden" id="contact">
       <div className="w-[90%] lg:w-[80%] flex md:flex-row flex-col items-start  gap-20">
         {/* Left section */}
         <div className="space-y-4  w-full flex-[0.4]">
@@ -22,7 +23,13 @@ const ContactUs = () => {
 
         {/* Right section  */}
         <div className=" w-full flex-[0.6] space-y-10">
-          <div className="space-y-3">
+          <motion.div
+            initial={{ opacity: 0, x: 300 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.5 }}
+            className="space-y-3"
+          >
             <div className="flex items-center space-x-3">
               <p className="font-gilroy-extra-bold text-white text-lg md:text-xl">
                 Select one...
@@ -41,9 +48,15 @@ const ContactUs = () => {
               <option value="option4">Feedback and suggestions</option>
               <option value="option5">Other...</option>
             </select>
-          </div>
+          </motion.div>
 
-          <div className="space-y-3">
+          <motion.div
+            initial={{ opacity: 0, x: 300 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 1 }}
+            className="space-y-3"
+          >
             <div className="flex items-center space-x-3">
               <p className="font-gilroy-extra-bold text-white text-lg md:text-xl">
                 Full Name
@@ -58,10 +71,16 @@ const ContactUs = () => {
               type="text"
               className="w-full p-2 border border-gray-300 text-white font-metropolis rounded-sm outline-none"
             />
-          </div>
+          </motion.div>
 
 
-          <div className="space-y-3">
+          <motion.div
+            initial={{ opacity: 0, x: 300 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 1.2 }}
+            className="space-y-3"
+          >
             <div className="flex items-center space-x-3">
               <p className="font-gilroy-extra-bold text-white text-lg md:text-xl">
                 Email Address
@@ -76,9 +95,15 @@ const ContactUs = () => {
               type="email"
               className="w-full p-2 border border-gray-300 text-white font-metropolis rounded-sm outline-none"
             />
-          </div>
+          </motion.div>
 
-          <div className="space-y-3">
+          <motion.div
+            initial={{ opacity: 0, x: 300 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 1.5 }}
+            className="space-y-3"
+          >
             <div className="flex items-center space-x-3">
               <p className="font-gilroy-extra-bold text-white text-lg md:text-xl">
                 Leave us a note
@@ -93,7 +118,7 @@ const ContactUs = () => {
               rows={4}
               className="w-full p-2 border border-gray-300 text-white font-metropolis rounded-sm outline-none"
             />
-          </div>
+          </motion.div>
 
 
           <button className="bg-primary text-black px-6 py-2 rounded-sm font-gilroy-extra-bold flex items-center space-x-4">

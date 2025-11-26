@@ -1,5 +1,6 @@
 import { FaSpotify, FaYoutube } from "react-icons/fa";
 import { SiApplepodcasts } from "react-icons/si";
+import { motion } from "framer-motion";
 
 const CircleImgBundle = ({ imgURLs }: { imgURLs: string[] }) => {
   return (
@@ -15,7 +16,12 @@ const CircleImgBundle = ({ imgURLs }: { imgURLs: string[] }) => {
 
 const EpisodeCard = ({ theme = "dark" }: { theme?: "light" | "dark" }) => {
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, x: 200 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: false, amount: 0.3 }}
+      transition={{ duration: 0.5 }}
+
       className={`w-full  h-fit p-8 md:p-16 relative flex md:flex-row flex-col items-start gap-14 ${
         theme === "light" ? "bg-primary" : "bg-transparent"
       }`}
@@ -66,7 +72,7 @@ const EpisodeCard = ({ theme = "dark" }: { theme?: "light" | "dark" }) => {
           <SiApplepodcasts className="text-4xl" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
