@@ -1,2 +1,3 @@
 # Podcast site
-added animation
+added animation commit
+minor fixes commit
