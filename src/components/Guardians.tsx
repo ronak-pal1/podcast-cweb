@@ -80,11 +80,11 @@ const Guardians = () => {
   return (
     <div className="w-full flex flex-col bg-primary h-fit py-24 gap-y-8">
       {/* heading and controls */}
-      <div className="px-14 lg:px-24 w-full flex items-end justify-between">
+      <div className="px-8 sm:px-14 lg:px-24 w-full flex items-end justify-between">
         {/* heading */}
         <div className="flex flex-col space-y-8">
           <div className="w-[100px] h-[3px] bg-black"></div>
-          <p className="text-5xl md:text-7xl font-gilroy-extra-bold text-black">
+          <p className="text-4xl sm:text-5xl md:text-7xl font-gilroy-extra-bold text-black">
             Guardians
           </p>
         </div>
@@ -93,16 +93,16 @@ const Guardians = () => {
         <div className="flex items-center space-x-4">
           <button
             onClick={moveLeft}
-            className="w-[48px] h-[48px] border-2 border-black rounded-full flex items-center justify-center hover:bg-black hover:text-white transition-colors duration-200"
+            className="w-[40px] h-[40px] sm:w-[48px] sm:h-[48px] border-2 border-black rounded-full flex items-center justify-center hover:bg-black hover:text-white transition-colors duration-200"
           >
-            <IoChevronBackSharp className="text-xl" />
+            <IoChevronBackSharp className="text-lg sm:text-xl" />
           </button>
 
           <button
             onClick={moveRight}
-            className="w-[48px] h-[48px] border-2 border-black rounded-full flex items-center justify-center hover:bg-black hover:text-white transition-colors duration-200"
+            className="w-[40px] h-[40px] sm:w-[48px] sm:h-[48px] border-2 border-black rounded-full flex items-center justify-center hover:bg-black hover:text-white transition-colors duration-200"
           >
-            <IoChevronBackSharp className="text-xl rotate-180" />
+            <IoChevronBackSharp className="text-lg sm:text-xl rotate-180" />
           </button>
         </div>
       </div>
@@ -112,7 +112,7 @@ const Guardians = () => {
         ref={scrollContainerRef}
         style={{ scrollBehavior: "smooth" }}
       >
-        <div className="flex gap-x-12 ml-14 pr-14 lg:ml-24">
+        <div className="flex gap-x-12 ml-8 sm:ml-14 pr-14 lg:ml-24">
           {GuardianData.map((guardian, index) => (
             <GuardianCard
               key={index}

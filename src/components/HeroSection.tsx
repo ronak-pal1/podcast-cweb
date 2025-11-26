@@ -15,7 +15,7 @@ const HeroSection = () => {
           <p className="text-white font-permanent-marker text-xl">SCROLL</p>
         </div>
 
-        <div className="w-[90%] lg:w-[70%]">
+        <div className="w-full sm:w-[90%] lg:w-[70%]">
           <video
             width="100%"
             height="100%"
@@ -71,7 +71,7 @@ const HeroSection = () => {
       </div>
 
       <div className="w-full flex items-center justify-center py-2">
-        <p className="text-fade text-xl md:text-2xl max-w-[450px] md:max-w-xl text-center font-metropolis-extra-light uppercase">
+        <p className="text-fade text-xl md:text-2xl max-w-[400px] sm:max-w-[450px] md:max-w-xl text-center font-metropolis-extra-light uppercase">
           We talk about design, development, business AND how to reconcile all
           the arguments in IT.
         </p>

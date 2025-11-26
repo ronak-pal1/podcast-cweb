@@ -7,14 +7,14 @@ import LatestEpisodes from "../components/LatestEpisodes";
 
 const Home = () => {
   return (
-    <>
+    <div className="overflow-x-hidden">
       <HeroSection />
       <AboutTheShow />
       <LatestEpisodes />
       <Guardians />
       <ContactUs />
       <Footer />
-    </>
+    </div>
   );
 };
 

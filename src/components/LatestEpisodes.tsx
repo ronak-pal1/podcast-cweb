@@ -5,10 +5,10 @@ import { motion } from "framer-motion";
 const CircleImgBundle = ({ imgURLs }: { imgURLs: string[] }) => {
   return (
     <div className="flex">
-      <img src={imgURLs[0]} className="w-14 h-14 rounded-full z-10" />
+      <img src={imgURLs[0]} className="w-10 h-10 sm:w-14 sm:h-14 rounded-full z-10" />
       <img
         src={imgURLs[1]}
-        className="w-14 h-14 rounded-full -ml-5 z-0 relative"
+        className="sm:w-14 sm:h-14 w-10 h-10 rounded-full -ml-5 z-0 relative"
       />
     </div>
   );
@@ -22,7 +22,7 @@ const EpisodeCard = ({ theme = "dark" }: { theme?: "light" | "dark" }) => {
       viewport={{ once: false, amount: 0.3 }}
       transition={{ duration: 0.5 }}
 
-      className={`w-full  h-fit p-8 md:p-16 relative flex md:flex-row flex-col items-start gap-14 ${
+      className={`w-full  h-fit p-8 md:p-16 relative flex md:flex-row flex-col items-start gap-8 sm:gap-14 ${
         theme === "light" ? "bg-primary" : "bg-transparent"
       }`}
     >
@@ -37,12 +37,12 @@ const EpisodeCard = ({ theme = "dark" }: { theme?: "light" | "dark" }) => {
         <h2
           className={`${
             theme === "light" ? "text-black" : "text-white"
-          } font-gilroy-extra-bold text-3xl`}
+          } font-gilroy-extra-bold text-2xl sm:text-3xl`}
         >
           Business with a mission, or values ​​in the VC world
         </h2>
 
-        <p className="text-fade2 text-sm font-metropolis-extra-light">
+        <p className="text-fade2 text-xs sm:text-sm font-metropolis-extra-light">
           Małgorzata Walczak on how to combine values ​​with business in the
           world of venture capital. How can we create innovations that impact
           national development?
@@ -56,7 +56,7 @@ const EpisodeCard = ({ theme = "dark" }: { theme?: "light" | "dark" }) => {
             ]}
           />
 
-          <div className="text-sm text-fade2 font-metropolis-extra-light space-y-1">
+          <div className="text-xs sm:text-sm text-fade2 font-metropolis-extra-light space-y-1">
             <p>Margaret Walczak (Investment Director at PFR)</p>
             <p>Anna Elwart (CEO)</p>
           </div>
@@ -83,7 +83,7 @@ const LatestEpisodes = () => {
         {/* heading */}
         <div className="w-full space-y-10">
           <div className="w-[200px] h-[3px] bg-white"></div>
-          <p className="text-white font-gilroy-extra-bold  text-5xl md:text-7xl">
+          <p className="text-white font-gilroy-extra-bold  text-4xl sm:text-5xl md:text-7xl">
             The latest episode
           </p>
         </div>
