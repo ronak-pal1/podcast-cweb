@@ -23,13 +23,7 @@ const AboutTheShow = () => {
       {/* right section */}
       <div className="flex-[0.7]">
         <p className="font-metropolis text-lg md:text-xl leading-relaxed">
-          From devastating pitfalls to life-changing aha moments, hosts and
-          serial entrepreneurs themselves Pete Sena and David Salinas push
-          interviews past the surface for an in-depth, insightful glimpse at the
-          future of business and brands. Take your seat at the table to hear
-          guests recount their failures, re-live their midnight planning
-          sessions, share their hopes & passions, and explain what’s next for
-          their business, industry, and the world.
+          Jonaki Vibes is a podcast that brings honest conversations, inspiring stories, and real discussions on social issues, culture, and community change. We highlight voices that matter and shine a light on the people shaping Assam’s tomorrow.
         </p>
       </div>
     </div>

@@ -34,7 +34,7 @@ const HeroSection = () => {
 
           <div className="w-full -mt-[100px] sm:-mt-[150px] md:-mt-[300px] flex flex-col items-center space-y-5">
             <p className="text-primary font-permanent-marker text-[30px] md:text-[40px] ">
-              Season Two
+              Lighting Conversations
             </p>
 
             <div className="flex flex-col items-center justify-center space-y-1">
@@ -72,8 +72,7 @@ const HeroSection = () => {
 
       <div className="w-full flex items-center justify-center py-2">
         <p className="text-fade text-xl md:text-2xl max-w-[400px] sm:max-w-[450px] md:max-w-xl text-center font-metropolis-extra-light uppercase">
-          We talk about design, development, business AND how to reconcile all
-          the arguments in IT.
+          Stories, interviews, and real conversations on social issues, culture, and changemakers; straight from Assam. 
         </p>
       </div>
     </div>

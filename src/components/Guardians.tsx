@@ -1,39 +1,34 @@
 import { IoChevronBackSharp } from "react-icons/io5";
 import { useRef } from "react";
 import { motion } from "framer-motion";
+import hostSaddamHussainImg from "../assets/hosts/saddam-hussain.webp";
+import hostRahulShaImg from "../assets/hosts/rahul-sha.webp";
+import hostSimonChoudhuryImg from "../assets/hosts/simon-choudhury.webp";
+import hostRajatSarkarImg from "../assets/hosts/rajat-sarkar.webp";
 
 const GuardianData = [
   {
-    image:
-      "https://cdn.prod.website-files.com/6357ba166a2a7d36261b1875/637d67b6ce154953e15eaf2c_anna-elwart.webp",
-    name: "Anna Elwart",
-    title: "CEO",
+    image: hostSaddamHussainImg,
+    name: "Saddam Hussain",
+    title: "Social Worker • Businessman",
+  },
+   {
+    image: hostRajatSarkarImg,
+    name: "Rajat Sarkar",
+    title: "Content Creator",
   },
   {
-    image:
-      "https://cdn.prod.website-files.com/6357ba166a2a7d36261b1875/637d67b6fd7d4f269b79c769_micha197130-mazur.webp",
-    name: "Michael Mazur",
-    title: "CTO",
+    image: hostSimonChoudhuryImg,
+    name: "Simon Choudhury",
+    title: "Digital Marketer • Social Worker",
   },
   {
-    image:
-      "https://cdn.prod.website-files.com/6357ba166a2a7d36261b1875/637d67b6ce154951e25eaf2d_micha197130-warda.webp",
-    name: "Michael Warda",
-    title: "CMO",
+    image: hostRahulShaImg,
+    name: "Rahul Sha",
+    title: "Social Worker • Businessman",
   },
-  {
-    image:
-      "https://cdn.prod.website-files.com/6357ba166a2a7d36261b1875/637d67b6ce154953e15eaf2c_anna-elwart.webp",
-    name: "Anna Elwart",
-    title: "CEO",
-  },
-  {
-    image:
-      "https://cdn.prod.website-files.com/6357ba166a2a7d36261b1875/637d67b6fd7d4f269b79c769_micha197130-mazur.webp",
-    name: "Michael Mazur",
-    title: "CTO",
-  },
-];
+ 
+]
 
 const GuardianCard = ({
   image,
@@ -85,7 +80,7 @@ const Guardians = () => {
         <div className="flex flex-col space-y-8">
           <div className="w-[100px] h-[3px] bg-black"></div>
           <p className="text-4xl sm:text-5xl md:text-7xl font-gilroy-extra-bold text-black">
-            Guardians
+            Our Hosts
           </p>
         </div>
 
